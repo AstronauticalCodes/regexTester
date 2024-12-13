@@ -5,4 +5,4 @@ from django import forms
 class MainForm(forms.ModelForm):
     class Meta:
         model = Record
-        fields = ['regex', 'test']
+        fields = ['regex', 'text']
