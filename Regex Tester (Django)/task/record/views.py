@@ -21,10 +21,6 @@ class MainView(View):
         req_copy = request.POST.copy()
         req_copy['result'] = result
         form = self.form(req_copy)
-        print(req_copy)
-        print(request.POST)
-        print(req_copy)
         if form.is_valid():
-            print('hello')
             form.save()
             return HttpResponse(f"<h2>{result}</h2>")
