@@ -26,3 +26,13 @@ class MainView(View):
             pk = self.model.objects.all().last().id
             print(pk)
             return redirect(f'/result/{pk}/')
+
+
+class ResultView(View):
+    template_name = 'record/result.html'
+    model = Record
+
+    def get(self, request, pk, *args, **kwargs):
+        pk = self.kwargs['pk']
+        record = self.model.objects.filter(id=pk).first()
+        return render(request, self.template_name, context={'record': record})
