@@ -10,6 +10,9 @@ class RegexToolTestRunner(RegexToolTest):
         RegexToolTest.check_home_page_greeting,
         RegexToolTest.check_the_csrf_token,
         RegexToolTest.check_home_page_layout,
+        # task 3
+        RegexToolTest.check_create_regex_test,
+        RegexToolTest.check_write_to_database,
 
     ]
 
