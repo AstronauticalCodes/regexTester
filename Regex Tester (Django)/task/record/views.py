@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from .forms import MainForm
 from django.http import HttpResponse
@@ -21,10 +21,8 @@ class MainView(View):
         req_copy = request.POST.copy()
         req_copy['result'] = result
         form = self.form(req_copy)
-        print(req_copy)
-        print(request.POST)
-        print(req_copy)
         if form.is_valid():
-            print('hello')
             form.save()
-            return HttpResponse(f"<h2>{result}</h2>")
+            pk = self.model.objects.all().last().id
+            print(pk)
+            return redirect(f'/result/{pk}/')

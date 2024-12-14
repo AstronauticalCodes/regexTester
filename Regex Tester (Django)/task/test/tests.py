@@ -13,6 +13,10 @@ class RegexToolTestRunner(RegexToolTest):
         # task 3
         RegexToolTest.check_create_regex_test,
         RegexToolTest.check_write_to_database,
+        # task 4
+        RegexToolTest.check_redirect_result_page,
+        RegexToolTest.check_result_page,
+        RegexToolTest.check_result_links,
 
     ]
 
