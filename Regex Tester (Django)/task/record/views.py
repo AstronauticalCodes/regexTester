@@ -36,3 +36,12 @@ class ResultView(View):
         pk = self.kwargs['pk']
         record = self.model.objects.filter(id=pk).first()
         return render(request, self.template_name, context={'record': record})
+
+
+class HistoryView(View):
+    template_name = 'record/history.html'
+    model = Record
+
+    def get(self, request, *args, **kwargs):
+        latest_records = self.model.objects.all().order_by('-id')
+        return render(request, self.template_name, context={'records': latest_records})
