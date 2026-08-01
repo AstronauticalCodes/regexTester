@@ -1,3 +1,5 @@
+ <div align="center">
+
 # Regex Tester
 
 ![Python](https://img.shields.io/badge/python-3.x-blue?logo=python&logoColor=white)
@@ -7,7 +9,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/AstronauticalCodes/regexTester?style=social)
 
 A **Django-based web application** for testing and validating regular expressions. It gives users a simple browser-based interface to submit a regex pattern together with sample text and see how the pattern behaves, backed by Django's built-in authentication and admin tooling.
-
+</div>
 ---
 
 ## Table of Contents
